@@ -16,10 +16,17 @@ pipeline {
                 }
             }
         }
+       stage('Mid') {
+            steps {
+                echo "Mid step"
+            }
+        }
+        
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+        
     }
 }
